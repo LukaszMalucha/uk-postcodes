@@ -24,7 +24,7 @@
           </router-link>
         </div>
         <div class="col s12 m3 l3 plain-element">
-          <router-link :to="{name: 'home'}">
+          <router-link :to="{name: 'advanced-validation'}">
             <div class="card card-menu">
               <div class="card-image">
                 <img class="img-menu" src="/static/img/pin_2.png" alt="Logo"/>

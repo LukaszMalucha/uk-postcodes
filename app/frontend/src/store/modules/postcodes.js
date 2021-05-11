@@ -31,6 +31,20 @@ const actions = {
     }
 
   },
+  async fetchAdvancedValidation({commit}, payload) {
+    commit("setPostcode", null);
+    const response = await api.advancedValidation(payload);
+    if (!response)  {
+      commit("setFormError", "Something went wrong. Try again later");
+      setTimeout(() => document.getElementById("formError").style.display = "none", 5000);
+    } else {
+      commit("setResult", response.result);
+      var trimmedPostcode = payload.postcode.replace(" ", "");
+      commit("setPostcode", trimmedPostcode);
+      console.log(response)
+    }
+
+  },
   performSetFormError({commit}, error) {
     commit("setFormError", error);
   },

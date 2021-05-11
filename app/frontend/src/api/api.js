@@ -10,5 +10,8 @@ export default {
     let endpoint = `/api/standard-validation/`
     return apiService(endpoint, "POST", payload);
   },
-
+  advancedValidation(payload) {
+    let endpoint = `/api/advanced-validation/`
+    return apiService(endpoint, "POST", payload);
+  },
 }
