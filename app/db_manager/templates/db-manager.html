@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% load staticfiles %}
+
+
+{% block content %}
+
+<div id="page-index">
+  <div class="dashboard-cards">
+    <div class="row plain-element">
+      <div class="col s12 m12 l12  plain-element">
+        <div class="row row-title plain-element">
+
+          <br><br><br>
+
+
+        </div>
+      </div>
+      <div class="row plain-element">
+
+        <div class="col s12 m12 l2 plain-element" id="activeTrendsColumn">
+          <div class="row plain-element">
+            <div class="card card-side card-side-left">
+              <div class="section-link">
+
+                <a href="{% url 'db_manager:postcode-upload' %}"><i class="fas fa-envelope"></i> &nbsp; Postcode Upload
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  {% endblock %}
