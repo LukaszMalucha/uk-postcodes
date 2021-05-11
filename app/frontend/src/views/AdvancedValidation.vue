@@ -21,30 +21,37 @@
       <br>
       <br>
       <div id="result" class="row plain-element">
+
         <div v-if="getResult()" class="row row-result text-center">
-          <p class="invalid" v-if="getResult().result == 'Invalid'"> Postcode "{{ getPostcode() }}" is Invalid</p>
-          <table  v-if="getResult().postcode" style="width:100%">
-            <tr>
-              <td>Postcode:</td>
-              <td>{{ getPostcode() }}</td>
-            </tr>
-            <tr>
-              <td>County:</td>
-              <td>{{ getResult().county }}</td>
-            </tr>
-            <tr>
-              <td>District:</td>
-              <td>{{ getResult().district }}</td>
-            </tr>
-            <tr>
-              <td>Ward:</td>
-              <td>{{ getResult().ward }}</td>
-            </tr>
-            <tr>
-              <td>Constituency:</td>
-              <td>{{ getResult().constituency }}</td>
-            </tr>
-          </table>
+          <div v-if="getResult().postcode" class="row row-table">
+            <table style="width:100%">
+              <tr>
+                <td>Postcode:</td>
+                <td class="right">{{ getPostcode() }}</td>
+              </tr>
+              <tr>
+                <td>County:</td>
+                <td class="right">{{ getResult().county }}</td>
+              </tr>
+              <tr>
+                <td>District:</td>
+                <td class="right">{{ getResult().district }}</td>
+              </tr>
+              <tr>
+                <td>Ward:</td>
+                <td class="right">{{ getResult().ward }}</td>
+              </tr>
+              <tr>
+                <td>Constituency:</td>
+                <td class="right">{{ getResult().constituency }}</td>
+              </tr>
+              <tr>
+                <td>Lat, Long:</td>
+                <td class="right">{{ getResult().lat }}, {{ getResult().long }}</td>
+              </tr>
+            </table>
+          </div>
+          <p class="invalid" v-else> Postcode "{{ getPostcode() }}" is Invalid</p>
         </div>
       </div>
     </div>
@@ -54,12 +61,13 @@
 
 
 <script>
-
 import { mapGetters, mapActions } from "vuex";
 
 
 export default {
-  name: "StandardValidation",
+  name: "AdvancedValidation",
+  components: {
+  },
   data() {
     return {
       search: "",
@@ -77,6 +85,8 @@ export default {
   },
   computed: {
 
+  },
+  mounted() {
   },
   created() {
     document.title = "Advanced Validation";

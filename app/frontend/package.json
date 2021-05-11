@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "leaflet": "^1.7.1",
     "loadash": "^1.0.0",
     "qs": "^6.10.1",
     "vue": "^2.6.11",
