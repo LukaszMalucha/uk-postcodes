@@ -170,6 +170,14 @@ h4 {
   margin: auto;
 }
 
+.row-proud {
+  width: 50%;
+  margin: auto;
+  font-size: 20px;
+  font-style: italic;
+
+}
+
 .number-card {
   text-align: center;
   font-size: 18px;
@@ -185,8 +193,8 @@ h4 {
   text-align: center;
   font-size: 16px;
   color: #1f2a4e;
-  width: 90%;
-  margin: 10px 10px;
+  width: 100%;
+  margin: 6px 6px;
   background-color: #f3f4f6;
   padding: 10px 0px;
   border-radius: 3px;
@@ -210,6 +218,15 @@ h4 {
 
 .font-yellow {
   color: #ebc64a !important;
+}
+
+.avatar {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.row-proud a {
+  line-height: 100px;
 }
 
 /*----------------------------------------------

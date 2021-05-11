@@ -5,10 +5,7 @@
       <div v-if="getNumbers()" class="row row-numbers">
         <div v-for="(element, index) in getNumbers()" class="col s4 m2 l1 col-link" :key="index">
           <div class="card number-card">
-            <span v-if="element == 'Three'" class="font-yellow">{{ element }}</span>
-            <span v-else-if="element == 'Five'" class="font-green">{{ element }}</span>
-            <span v-else-if="element == 'ThreeFive'" class="font-red">{{ element }}</span>
-            <span v-else>{{ element }}</span>
+            <span>{{ element }}</span>
           </div>
         </div>
       </div>

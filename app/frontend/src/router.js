@@ -4,6 +4,7 @@ import Home from "./views/Home.vue";
 import StandardValidation from "./views/StandardValidation.vue";
 import AdvancedValidation from "./views/AdvancedValidation.vue";
 import ThreeFiver from "./views/ThreeFiver.vue";
+import ProudView from "./views/ProudView.vue";
 import NotFound from "./views/NotFound.vue";
 
 Vue.use(Router)
@@ -30,6 +31,11 @@ export default new Router({
       path: "/threefiver",
       name: "threefiver",
       component: ThreeFiver,
+    },
+    {
+      path: "/proud",
+      name: "proud",
+      component: ProudView,
     },
     {
       path: "*",

@@ -10,7 +10,30 @@
         </div>
       </div>
       <div class="row row-cards">
-        <div class="col s12 m3 l3 plain-element"></div>
+        <div class="col s12 m3 l3 plain-element">
+          <router-link :to="{name: 'proud'}">
+            <div class="card card-menu">
+              <div class="card-image">
+                <img class="img-menu" src="/static/img/proud.png" alt="35"/>
+              </div>
+              <div class="card-content">
+                <span class="card-title">What I'm Proud Of</span>
+              </div>
+            </div>
+          </router-link>
+        </div>
+        <div class="col s12 m3 l3 plain-element">
+          <router-link :to="{name: 'threefiver'}">
+            <div class="card card-menu">
+              <div class="card-image">
+                <img class="img-menu" src="/static/img/35.png" alt="35"/>
+              </div>
+              <div class="card-content">
+                <span class="card-title">ThreeFiver</span>
+              </div>
+            </div>
+          </router-link>
+        </div>
         <div class="col s12 m3 l3 plain-element">
           <router-link :to="{name: 'standard-validation'}">
             <div class="card card-menu">
@@ -35,19 +58,7 @@
             </div>
           </router-link>
         </div>
-        <div class="col s12 m3 l3 plain-element">
-          <router-link :to="{name: 'threefiver'}">
-            <div class="card card-menu">
-              <div class="card-image">
-                <img class="img-menu" src="/static/img/35.png" alt="35"/>
-              </div>
-              <div class="card-content">
-                <span class="card-title">ThreeFiver</span>
-              </div>
-            </div>
-          </router-link>
 
-        </div>
       </div>
 
     </div>
