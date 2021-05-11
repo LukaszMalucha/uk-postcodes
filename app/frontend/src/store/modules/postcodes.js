@@ -26,7 +26,7 @@ const actions = {
       var trimmedPostcode = payload.postcode.replace(" ", "");
       commit("setPostcode", trimmedPostcode);
 
-      console.log(response.result);
+
       setTimeout(() => document.getElementById("result").style.display = "none", 6000);
     }
 
@@ -41,12 +41,16 @@ const actions = {
       commit("setResult", response.result);
       var trimmedPostcode = payload.postcode.replace(" ", "");
       commit("setPostcode", trimmedPostcode);
-      console.log(response)
     }
 
   },
   performSetFormError({commit}, error) {
     commit("setFormError", error);
+  },
+  clearPostcode({commit}) {
+    commit("setPostcode", null);
+    commit("setResult", null);
+    commit("setFormError", null);
   },
 };
 

@@ -1,16 +1,17 @@
-from django.shortcuts import render
-from django.shortcuts import redirect
-from core.models import PostcodeModel
-from django.contrib.auth.decorators import login_required
 import pandas as pd
+from django.contrib.auth.decorators import user_passes_test
+from django.shortcuts import redirect
+from django.shortcuts import render
+
+from core.models import PostcodeModel
 
 
-@login_required
+@user_passes_test(lambda u: u.is_superuser)
 def db_manager(request):
     return render(request, "db-manager.html", )
 
 
-@login_required
+@user_passes_test(lambda u: u.is_superuser)
 def postcode_upload(request):
     """View for uploading data to database """
     if request.method == "POST":

@@ -81,7 +81,7 @@ export default {
   },
   methods: {
     ...mapGetters(["getFormError", "getResult", "getPostcode", "getUsername", "isLoggedIn"]),
-    ...mapActions(["fetchAdvancedValidation","performSetFormError"]),
+    ...mapActions(["fetchAdvancedValidation","performSetFormError", "clearPostcode"]),
     submitQuery() {
       this.search = "";
       document.getElementById("result").style.display = "block";
@@ -96,6 +96,7 @@ export default {
   created() {
     document.title = "Advanced Validation";
     this.performSetFormError(null);
+    this.clearPostcode();
   }
 }
 

@@ -44,10 +44,12 @@
     </div>
     <ul class="nav navbar-top-links navbar-right">
        {% if user.is_authenticated %}
-        <li><span><a class="nav-link" href="/admin/">Admin </a></span>
-        </li>
-         <li><span><a class="nav-link" href="{% url 'db_manager:db-manager' %}">DB Manager</a></span>
-        </li>
+        {% if user.is_superuser %}
+          <li><span><a class="nav-link" href="/admin/">Admin </a></span>
+          </li>
+           <li><span><a class="nav-link" href="{% url 'db_manager:db-manager' %}">DB Manager</a></span>
+          </li>
+        {% endif %}
       <li>
           <form method="post" action="{% url 'account_logout' %}">
             {% csrf_token %}
@@ -75,6 +77,9 @@
 </div>
 <!-- Materialize Js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+{% block js %}
+{% endblock %}
 
 </body>
 

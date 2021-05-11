@@ -13,7 +13,7 @@ from django.forms.models import model_to_dict
 
 class StandardValidationView(views.APIView):
     """View for the standard validation"""
-    permission_classes = (IsAdminOrReadOnly, IsAuthenticated)
+    permission_classes = (IsAuthenticated,)
 
     def get(self, request):
         return Response({"message": "Validate UK Postcode"}, status=status.HTTP_200_OK)
@@ -33,7 +33,7 @@ class StandardValidationView(views.APIView):
 
 class AdvancedValidationView(views.APIView):
     """View for the advanced validation"""
-    permission_classes = (IsAdminOrReadOnly, IsAuthenticated)
+    permission_classes = (IsAuthenticated,)
 
     def get(self, request):
         return Response({"message": "Validate UK Postcode"}, status=status.HTTP_200_OK)
@@ -56,7 +56,7 @@ class AdvancedValidationView(views.APIView):
 class ThreeFiverView(views.APIView):
     """View for ThreeFiver"""
 
-    permission_classes = (IsAdminOrReadOnly, IsAuthenticated)
+    permission_classes = (IsAuthenticated,)
 
     def get(self, request):
 

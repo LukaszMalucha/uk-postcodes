@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     ...mapGetters(["getFormError", "getResult", "getPostcode", "getUsername", "isLoggedIn"]),
-    ...mapActions(["fetchStandardValidation","performSetFormError"]),
+    ...mapActions(["fetchStandardValidation","performSetFormError", "clearPostcode"]),
     submitQuery() {
       this.search = "";
       document.getElementById("result").style.display = "block";
@@ -67,6 +67,7 @@ export default {
 
     document.title = "Standard Validation";
     this.performSetFormError(null);
+    this.clearPostcode();
   }
 }
 
