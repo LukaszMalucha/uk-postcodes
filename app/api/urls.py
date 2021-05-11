@@ -14,6 +14,7 @@ urlpatterns = [
     path("", include(router.urls)),
     path("standard-validation/", views.StandardValidationView.as_view(), name="standard-validation"),
     path("advanced-validation/", views.AdvancedValidationView.as_view(), name="advanced-validation"),
+    path("threefiver/", views.ThreeFiverView.as_view(), name="threefiver"),
 ]
 
 

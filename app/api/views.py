@@ -53,6 +53,18 @@ class AdvancedValidationView(views.APIView):
             return Response({"result": "Invalid"}, status=status.HTTP_200_OK)
 
 
+class ThreeFiverView(views.APIView):
+    """View for ThreeFiver"""
+
+    permission_classes = (IsAdminOrReadOnly, IsAuthenticated)
+
+    def get(self, request):
+
+        numbers = ["Three"*(i%3==0) + "Five"*(i%5==0) or i for i in range(1, 101)]
+
+
+        return Response({"numbers": numbers}, status=status.HTTP_200_OK)
+
 
 
 class PostcodeModelViewSet(viewsets.ModelViewSet):
