@@ -8,10 +8,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 env = environ.Env(DEBUG=(bool, False))
 environ.Env.read_env()
 
-DEBUG = env("DEBUG")
-SECRET_KEY = env("SECRET_KEY")
-ALLOWED_HOSTS = ["*"]
-
+if "SECRET_KEY" in os.environ:
+    SECRET_KEY = env("SECRET_KEY")
+    DEBUG = env("DEBUG")
+else:
+    SECRET_KEY = "testing_ci"
+    DEBUG = True
 
 # Application definition
 
