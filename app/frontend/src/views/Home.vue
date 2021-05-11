@@ -7,12 +7,12 @@
       <div class="row row-title">
         <div class="page-title-container">
           <h4 class="page-title underline-blue">
-            Postcode Validation Portal
+            Scurri Assignment Portal
           </h4>
         </div>
       </div>
       <div class="row row-cards">
-        <div class="col s12 m3 l3 plain-element">
+        <div class="col s12 m6 l3 plain-element">
           <router-link :to="{name: 'proud'}">
             <div class="card card-menu">
               <div class="card-image">
@@ -24,7 +24,7 @@
             </div>
           </router-link>
         </div>
-        <div class="col s12 m3 l3 plain-element">
+        <div class="col s12 m6 l3 plain-element">
           <router-link :to="{name: 'threefiver'}">
             <div class="card card-menu">
               <div class="card-image">
@@ -36,7 +36,7 @@
             </div>
           </router-link>
         </div>
-        <div class="col s12 m3 l3 plain-element">
+        <div class="col s12 m6 l3 plain-element">
           <router-link :to="{name: 'standard-validation'}">
             <div class="card card-menu">
               <div class="card-image">
@@ -48,7 +48,7 @@
             </div>
           </router-link>
         </div>
-        <div class="col s12 m3 l3 plain-element">
+        <div class="col s12 m6 l3 plain-element">
           <router-link :to="{name: 'advanced-validation'}">
             <div class="card card-menu">
               <div class="card-image">

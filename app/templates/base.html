@@ -62,26 +62,6 @@
     </ul>
   </nav>
 
-  <div class="topnav">
-    <a class="navbar-brand" href="/">
-      <img src="https://www.scurri.com/wp-content/uploads/2021/01/Group-3.svg" alt="Scurri" class="img-logo">
-    </a>
-    <div id="myLinks">
-
-      {% if user.is_authenticated %}
-      <form method="post" action="{% url 'account_logout' %}">
-        {% csrf_token %}
-        <span><button class="nav-button">Logout</button></span>
-      </form>
-
-      {% else %}
-      <a href="{% url 'account_login' %}">Log In</a>
-      {% endif %}
-    </div>
-    <a href="javascript:void(0);" class="icon" onclick="dropdown()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
   {% endblock %}
 
   {% block content %}

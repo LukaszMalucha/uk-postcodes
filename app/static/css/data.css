@@ -30,7 +30,7 @@
 }
 
 .row-table {
-  width: 30%;
+  width: 40%;
   margin: auto;
 }
 
@@ -590,14 +590,23 @@ td {
     letter-spacing: 0.6px;
   }
 
+  .row-table {
+    width: 60%;
+    margin: auto;
+  }
+
+  .btn-transparent {
+    right: 10px;
+  }
+
 
 }
 
 @media(max-width:1200px) {
 
-.rating i {
-    font-size: 9px;
-}
+  .rating i {
+      font-size: 9px;
+  }
 }
 
 
@@ -619,6 +628,10 @@ td {
     margin-right: 0;
     }
 
+  .row-table {
+    width: 80%;
+    margin: auto;
+  }
 
 
 }

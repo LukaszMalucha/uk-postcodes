@@ -657,7 +657,9 @@ h4 {
     }
 
 
-
+    .row-numbers {
+      width: 96%;
+    }
 }
 
 
@@ -671,10 +673,13 @@ h4 {
 
 @media(max-width:1200px) {
 
-.wine-dashboard {
-  width: 96%;
-  margin: auto;
-}
+  .card-menu .card-content .card-title {
+    font-size: 16px;
+  }
+
+  .number-card {
+    font-size: 12px;
+  }
 
 
 }
@@ -682,8 +687,14 @@ h4 {
 
 @media(max-width:1025px) {
 
+  .page-title {
 
+    font-size: 32px;
+  }
 
+  .row-proud {
+    width: 90%;
+  }
 
 }
 

@@ -11,10 +11,10 @@
       </div>
       <br><br>
       <div class="row row-proud left-align">
-        <div class="col s12 m6 l2  plain-element">
+        <div class="col s4 m4 l3  plain-element">
           <img alt="Avatar" class="avatar" src="https://avatars.githubusercontent.com/u/42006092?v=4">
         </div>
-        <div class="col s12 m6 l8  plain-element">
+        <div class="col s8 m8 l8  plain-element">
             <a href="https://github.com/agatamalucha/UCDPA_agatamalucha" target="_blank">UCDPA Covid-19 Project </a>
         </div>
       </div>
@@ -46,7 +46,7 @@ export default {
   mounted() {
   },
   created() {
-    document.title = "What I'm proud of";
+    document.title = "What I'm Proud Of";
 
   }
 }

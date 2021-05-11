@@ -209,71 +209,7 @@ nav ul li:active {
 }
 
 
-/*------------------------------------------------------------------------------
-    HAMBURGER
-------------------------------------------------------------------------------*/
 
-
-.topnav {
-  display: none;
-  overflow: hidden;
-  background-color: #ffffff;
-  position: relative;
-
-}
-
-
-.topnav #myLinks {
-  display: none;
-}
-
-
-.topnav a {
-  color: black;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 16px;
-  display: block;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-}
-
-.topnav .nav-button {
-  font-size: 16px;
-  text-align: left;
-  width: 100%;
-  margin: 0px;
-  padding: 14px 16px;
-  height: auto;
-}
-
-.topnav .nav-button:hover {
-  color: #2dd46c;
-}
-
-
-.topnav a.icon {
-  background: #ffffff;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 12px !important;
-}
-
-.topnav a:hover {
-  color: #2dd46c;
-}
-
-.topnav .navbar-brand {
-  padding: 12px !important;
-}
-
-
-.topnav .active {
-  background-color: #4CAF50;
-  color: white;
-}
 
 
 /*------------------------------------------------------------------------------
@@ -309,15 +245,4 @@ nav ul li:active {
 	}
 }
 
-@media only screen and (max-width: 601px) {
-
-
-	.navbar {
-    display: none;
-  }
-  .topnav {
-    display: block;
-  }
-
-}
 

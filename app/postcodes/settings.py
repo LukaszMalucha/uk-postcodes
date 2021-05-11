@@ -129,6 +129,10 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_UNIQUE_EMAIL = True
 
+# NO NEW USER CAN BE CREATED
+ACCOUNT_ADAPTER = "postcodes.account_adapter.NoNewUsersAccountAdapter"
+
+
 # STATIC & MEDIA
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
