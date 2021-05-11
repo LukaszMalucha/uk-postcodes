@@ -165,6 +165,52 @@ h4 {
   font-size: 36px;
 }
 
+.row-numbers {
+  width: 80%;
+  margin: auto;
+}
+
+.number-card {
+  text-align: center;
+  font-size: 18px;
+  color: #1f2a4e;
+  width: 90%;
+  margin: 4%;
+  background-color: #f3f4f6;
+  padding: 16px 0px;
+  border-radius: 3px;
+}
+
+.number-card {
+  text-align: center;
+  font-size: 16px;
+  color: #1f2a4e;
+  width: 90%;
+  margin: 10px 10px;
+  background-color: #f3f4f6;
+  padding: 10px 0px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.number-card:hover,
+.number-card:active,
+.number-card:focus {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.font-green {
+  color: #25d366 !important;
+}
+
+.font-red {
+  color: #cf6262 !important;
+}
+
+.font-yellow {
+  color: #ebc64a !important;
+}
 
 /*----------------------------------------------
     SEARCHBOX

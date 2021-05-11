@@ -36,7 +36,7 @@
           </router-link>
         </div>
         <div class="col s12 m3 l3 plain-element">
-          <router-link :to="{name: 'advanced-validation'}">
+          <router-link :to="{name: 'threefiver'}">
             <div class="card card-menu">
               <div class="card-image">
                 <img class="img-menu" src="/static/img/35.png" alt="35"/>

@@ -14,4 +14,8 @@ export default {
     let endpoint = `/api/advanced-validation/`
     return apiService(endpoint, "POST", payload);
   },
+  threeFiver() {
+    let endpoint = `/api/threefiver/`
+    return apiService(endpoint);
+  },
 }
