@@ -568,6 +568,51 @@ h4 {
 .ul-error a { color:#3366cc; text-decoration:none; font-size:17px;}
 
 
+
+.login-card {
+  width: 20%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  padding: 15px 0px 0px 0px;
+  background-color: #f3f4f6;
+  color: #1f2a4e;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 15px;
+  font-weight: 400;
+
+}
+
+.login-card img {
+  width: 80%;
+  margin: auto;
+}
+
+.login-card .btn-login-card {
+  width: 100%;
+  border-radius: 3px;
+  background: #25d366;
+  letter-spacing: 1px;
+}
+
+.btn-success {
+  width: auto;
+  border-radius: 3px;
+  background: #03406a;
+  letter-spacing: 1px;
+  min-width: 30%;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active {
+    background: #50bb49;
+    color: #fff;
+}
+
 /*------------------------------------------------------------------------------
     FOOTER
 ------------------------------------------------------------------------------*/

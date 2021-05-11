@@ -1,6 +1,9 @@
 <template>
 <div id="page-index">
-  <div class="dashboard-cards">
+    <div v-if="!isLoggedIn()"  class="dashboard-cards">
+        <NoPermissionComponent/>
+    </div>
+    <div v-if="getUsername()" class="dashboard-cards">
     <div class="row row-search">
       <div class="row plain-element left-align">
         <div class="search-container">
@@ -35,10 +38,13 @@
 <script>
 
 import { mapGetters, mapActions } from "vuex";
-
+import NoPermissionComponent from "@/components/NoPermissionComponent.vue"
 
 export default {
   name: "StandardValidation",
+  components: {
+    NoPermissionComponent,
+  },
   data() {
     return {
       search: "",
@@ -46,7 +52,7 @@ export default {
     }
   },
   methods: {
-    ...mapGetters(["getFormError", "getResult", "getPostcode"]),
+    ...mapGetters(["getFormError", "getResult", "getPostcode", "getUsername", "isLoggedIn"]),
     ...mapActions(["fetchStandardValidation","performSetFormError"]),
     submitQuery() {
       this.search = "";

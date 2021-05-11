@@ -1,6 +1,9 @@
 <template>
 <div id="page-index">
-  <div class="dashboard-cards">
+    <div v-if="!isLoggedIn()"  class="dashboard-cards">
+        <NoPermissionComponent/>
+    </div>
+    <div v-if="getUsername()" class="dashboard-cards">
     <div class="row row-search">
       <br><br>
       <div class="row row-proud left-align">
@@ -22,17 +25,20 @@
 
 
 <script>
+import { mapGetters } from "vuex";
+import NoPermissionComponent from "@/components/NoPermissionComponent.vue"
 
 export default {
   name: "ProudView",
   components: {
+    NoPermissionComponent,
   },
   data() {
     return {
     }
   },
   methods: {
-
+    ...mapGetters([ "getUsername", "isLoggedIn"]),
   },
   computed: {
 

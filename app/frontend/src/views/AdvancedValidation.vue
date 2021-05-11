@@ -1,6 +1,9 @@
 <template>
 <div id="page-index">
-  <div class="dashboard-cards">
+    <div v-if="!isLoggedIn()"  class="dashboard-cards">
+        <NoPermissionComponent/>
+    </div>
+    <div v-if="getUsername()" class="dashboard-cards">
     <div class="row row-search">
       <div class="row plain-element left-align">
         <div class="search-container">
@@ -31,7 +34,8 @@
               </tr>
               <tr>
                 <td>County:</td>
-                <td class="right">{{ getResult().county }}</td>
+                <td v-if="getResult().county != 'nan'"  class="right">{{ getResult().county }}</td>
+                <td v-else class="right">-</td>
               </tr>
               <tr>
                 <td>District:</td>
@@ -62,11 +66,12 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
-
+import NoPermissionComponent from "@/components/NoPermissionComponent.vue"
 
 export default {
   name: "AdvancedValidation",
   components: {
+    NoPermissionComponent,
   },
   data() {
     return {
@@ -75,7 +80,7 @@ export default {
     }
   },
   methods: {
-    ...mapGetters(["getFormError", "getResult", "getPostcode"]),
+    ...mapGetters(["getFormError", "getResult", "getPostcode", "getUsername", "isLoggedIn"]),
     ...mapActions(["fetchAdvancedValidation","performSetFormError"]),
     submitQuery() {
       this.search = "";

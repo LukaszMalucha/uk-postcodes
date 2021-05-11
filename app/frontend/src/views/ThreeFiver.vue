@@ -1,6 +1,9 @@
 <template>
 <div id="page-index">
-  <div class="dashboard-cards">
+    <div v-if="!isLoggedIn()"  class="dashboard-cards">
+        <NoPermissionComponent/>
+    </div>
+    <div v-if="getUsername()" class="dashboard-cards">
     <div class="row row-search">
       <div v-if="getNumbers()" class="row row-numbers">
         <div v-for="(element, index) in getNumbers()" class="col s4 m2 l1 col-link" :key="index">
@@ -17,18 +20,19 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
-
+import NoPermissionComponent from "@/components/NoPermissionComponent.vue"
 
 export default {
   name: "ThreeFiver",
   components: {
+    NoPermissionComponent,
   },
   data() {
     return {
     }
   },
   methods: {
-    ...mapGetters(["getNumbers"]),
+    ...mapGetters(["getNumbers", "getUsername", "isLoggedIn"]),
     ...mapActions(["fetchThreeFiver"]),
   },
   computed: {
