@@ -7,6 +7,8 @@
 
 [![Build Status](https://travis-ci.com/LukaszMalucha/uk-postcodes.svg?branch=master)](https://travis-ci.com/LukaszMalucha/uk-postcodes)
 
+(My show as failed due to pull rate limit)
+
 #### Test Coverage:
 91%
 
