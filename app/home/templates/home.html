@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% load staticfiles %}
+
+
+{% block content %}
+
+<div id="page-index">
+  <div class="dashboard-cards">
+    <div class="row row-search">
+      <div class="row plain-element left-align">
+        <div class="search-container">
+
+          <div class="row searchbox-wrapper">
+            <form action="/search-name" class="col s12 plain-element add-form" method="GET">
+              <input type="hidden" name="csrfmiddlewaretoken"
+                     value="vGbaAWP79f9SM0ZAlNvkI1RxWygPhnIz06BDI4HXKeiDAfVAO7x9L03L2HIi0Zlx">
+              <input class="form-control" id="searchbox" type="text" placeholder="Search for Postcode"
+                     aria-label="Search for Postcode" name="query">
+              <button class="btn-transparent" type="submit"><i class="fas fa-search search-icon"></i></button>
+            </form>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
