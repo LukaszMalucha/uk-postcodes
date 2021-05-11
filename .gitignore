@@ -6,3 +6,4 @@ venv/*
 .idea/*
 *.env
 _old/*
+db.sqlite3
