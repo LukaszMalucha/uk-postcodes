@@ -19,8 +19,12 @@ class StandardValidationView(views.APIView):
         postcode = request.data["postcode"]
         postcode = postcode.replace(" ", "")
         response = validation.is_valid_postcode(postcode)
+        if response:
+            result = "Valid"
+        else:
+            result = "Invalid"
 
-        return Response({"result": response}, status=status.HTTP_200_OK)
+        return Response({"result": result}, status=status.HTTP_200_OK)
 
 
 

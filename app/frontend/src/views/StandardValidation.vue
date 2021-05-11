@@ -18,9 +18,13 @@
         <p class="error" id="formError"  v-if="getFormError()">{{ getFormError() }}</p>
         <p class="error" v-else></p>
       </div>
-      <div class="row row-result text-center">
-        <p  id="result"  v-if="getResult()">{{ getResult() }}</p>
-        <p v-else></p>
+      <br>
+      <br>
+      <div id="result" class="row plain-element">
+        <div v-if="getResult()" class="row row-result text-center">
+          <p class="valid" v-if="getResult() == 'Valid'"> Postcode "{{ getPostcode() }}" is Valid</p>
+          <p class="invalid" v-else> Postcode "{{ getPostcode() }}" is Invalid</p>
+        </div>
       </div>
     </div>
   </div>
@@ -42,10 +46,11 @@ export default {
     }
   },
   methods: {
-    ...mapGetters(["getFormError", "getResult"]),
+    ...mapGetters(["getFormError", "getResult", "getPostcode"]),
     ...mapActions(["fetchStandardValidation","performSetFormError"]),
     submitQuery() {
       this.search = "";
+      document.getElementById("result").style.display = "block";
       this.fetchStandardValidation({"postcode": this.searchQuery})
     },
   },
