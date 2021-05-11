@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     "core",
     "db_manager",
     "api",
-    "home",
     "user",
 
 ]
