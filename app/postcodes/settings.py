@@ -23,6 +23,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.sites",
+    "django_filters",
+
     "materializecssform",
     "storages",
     "corsheaders",
@@ -160,7 +162,7 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.AllowAny",
     ),
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
-    "PAGE_SIZE": 2000000
+    "PAGE_SIZE": 100
 }
 
 WEBPACK_LOADER = {
